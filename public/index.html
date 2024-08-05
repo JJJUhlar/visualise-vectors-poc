@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" />
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        .node {
+            stroke: #fff;
+            stroke-width: 1.5px;
+        }
+        .link {
+            stroke: #999;
+            stroke-opacity: 0.6;
+        }
+    </style>
+    <script src="main.js" type="module"></script>
+    <title>Visualise Vectors</title>
+  </head>
+  <body>
+    <h1>Visualise Vectors</h1>
+    <div>
+      <input id="question" />
+      <input id="question2" />
+      <input id="question3" />
+      <button id="submit">Submit</button>
+    </div>
+    <span id="loading" hidden>Loading...</span>
+
+    <div>
+      <div>
+        <div>
+          <label>X Control</label>
+          <input id="controlX" type="range" value="1" min="0" max="384" />
+        </div>
+        <div>
+          <label>Y Control</label>
+
+          <input id="controlY" type="range" value="2" min="0" max="384" />
+          
+        </div>
+        <div>
+          <label> Z Control </label>
+          <input id="controlZ" type="range" value="3" min="0" max="384" />
+        </div>
+      </div>
+      <div id="plotly-3d-plot" style="width: 100%;"></div>
+    </div>
+    <div>
+      <div id="plot"></div>
+
+    </div>
+  </body>
+</html>
